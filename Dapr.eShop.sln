@@ -5,9 +5,11 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dapr.eShop.Orders", "Dapr.eShop.Orders\Dapr.eShop.Orders.csproj", "{F643A948-D6BB-43E6-9C31-71BA81FCC25B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dapr.eShop.AppHost", "Dapr.eShop.AppHost\Dapr.eShop.AppHost.csproj", "{9A656E55-2748-41BF-B1C6-C62F2F9A2722}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dapr.eShop.AppHost", "Dapr.eShop.AppHost\Dapr.eShop.AppHost.csproj", "{9A656E55-2748-41BF-B1C6-C62F2F9A2722}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dapr.eShop.ServiceDefaults", "Dapr.eShop.ServiceDefaults\Dapr.eShop.ServiceDefaults.csproj", "{CCAF7C5F-F876-4B59-9193-86C81B53E2D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dapr.eShop.Checkout", "Dapr.eShop.Checkout\Dapr.eShop.Checkout.csproj", "{B885C9D5-6EA1-4E88-BC7D-699EAC44CCC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{CCAF7C5F-F876-4B59-9193-86C81B53E2D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCAF7C5F-F876-4B59-9193-86C81B53E2D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCAF7C5F-F876-4B59-9193-86C81B53E2D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B885C9D5-6EA1-4E88-BC7D-699EAC44CCC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B885C9D5-6EA1-4E88-BC7D-699EAC44CCC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B885C9D5-6EA1-4E88-BC7D-699EAC44CCC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B885C9D5-6EA1-4E88-BC7D-699EAC44CCC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

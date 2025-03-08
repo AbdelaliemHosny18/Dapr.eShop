@@ -2,37 +2,29 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
 
-// Add services to the container.
 
 var app = builder.Build();
 
 app.MapDefaultEndpoints();
 
-// Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+app.MapPost("/process-order",async (OrderRequest request)=>{
+
+    await ProcessOrderAsync(request);
+    return Results.Ok($"Order {request.orderId} confirmation: #{new Guid().ToString()[..8]}");
+
 });
+
 
 app.Run();
 
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
+async Task ProcessOrderAsync(OrderRequest request)
 {
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    //process order 
+    await Task.Delay(100);
 }
+
+public record OrderRequest (string orderId,string customerId,List<string> items);
